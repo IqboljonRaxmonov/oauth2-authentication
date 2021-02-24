@@ -33,22 +33,13 @@ spring:
             clientSecret: 0fab4cbc69fcceafc12775634d46371ea1da89de
             redirectUri: "http://localhost:8080/oauth2/callback/839b6ac7de38482dac93"
             scope:
-              - email
-              - public_profile
-#          linkedin:
-#            clientId: 77vftqc6n4yget
-#            clientSecret: 4xF8t1VfpkEDLMiX
-#            redirectUri: "http://localhost:8080/oauth2/callback/77vftqc6n4yget"
-##            authorizationGrantType:
+              - user:email
+              - read:user
         provider:
           facebook:
             authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
             tokenUri: https://graph.facebook.com/v3.0/oauth/access_token
             userInfoUri: https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)
-#          linkedin:
-#            userInfoUri: https://api.linkedin.com/v2/me
-#            accessTokenUri: https://www.linkedin.com/oauth/v2/accessToken
-
 app:
   auth:
     tokenSecret: secretKey
@@ -75,18 +66,3 @@ app:
 
 #     Github oauth2 configuration
 #   https://github.com/settings/apps
-
-#     LinkedIn oauth2 configuration
-#   https://www.linkedin.com/developers/apps/56411203/settings
-#   https://docs.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin
-
-
-#          twitter:
-#            client:
-#              clientId: oXJIDGVdB0PDnMICDwKckyzKm
-#              clientSecret: Z4BpN51kNsb2wbEfzDXm40v38W3I2P1u4H6fvfM6HQraVfry5j
-#              accessTokenUri: https://api.twitter.com/oauth/access_token
-#              userAuthorizationUri: https://api.twitter.com/oauth/authorize
-#              clientAuthenticationScheme: form
-#            resource:
-#              userInfoUri: https://api.twitter.com/1.1/users/show.json
